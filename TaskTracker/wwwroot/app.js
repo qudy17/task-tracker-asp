@@ -64,7 +64,7 @@ document.getElementById('todoForm').addEventListener('submit', async (e) => {
         title: title,
         description: description,
         isCompleted: false,
-        dueDate: dueDateVal ? new Date(dueDateVal).toISOString() : null
+        dueDate: dueDateVal ? dueDateVal : null
     };
 
     await fetch(API_URL, {
